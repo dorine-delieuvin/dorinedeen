@@ -1,0 +1,30 @@
+dorinedeen.com
+
+  Home
+    Header
+      logo
+      main title
+      tag line
+      3 social media buttons
+        etsy
+        instagram
+        facebook
+    pages
+      4 pages buttons
+        home
+        gallery
+        commissions
+        contact
+    links tree
+      etsy
+      instagram
+      facebook
+      instagram side project
+    Body
+      logo
+      title
+      content
+    
+  Gallery
+  Commissions
+  Contact
