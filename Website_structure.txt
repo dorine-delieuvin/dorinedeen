@@ -41,6 +41,7 @@ Pages:
       logo
       title
       text content
+    banner button get in touch
     site footer
     
   Gallery
