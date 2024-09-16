@@ -1,7 +1,7 @@
-dorinedeen.com
+dorinedeen.com/dorinedeen.wordpress.com
 
   Home
-    Header
+    site header
       logo
       main title
       tag line
@@ -9,22 +9,149 @@ dorinedeen.com
         etsy
         instagram
         facebook
-    pages
-      4 pages buttons
-        home
-        gallery
-        commissions
-        contact
+      page links banner
+        4 pages buttons
+          home
+          gallery
+          commissions
+          contact
     links tree
       etsy
       instagram
       facebook
       instagram side project
-    Body
+    body
       logo
       title
-      content
+      text content 
+    footer
+      banner button get in touch
+      3 social media links
+        Etsy
+        Instagram
+        Facebook
+      copyright line
+        Dorine Deen link
+        Wordpress link
     
   Gallery
+    site header
+      logo
+      main title
+      tag line
+      3 social media buttons
+        etsy
+        instagram
+        facebook
+      page links banner
+        4 pages buttons
+          home
+          gallery
+          commissions
+          contact
+    page header
+      title
+      tag line
+    body
+      media
+      caption
+      (inactive button)
+      separator
+    footer
+      banner button get in touch
+      3 social media links
+        Etsy
+        Instagram
+        Facebook
+      copyright line
+        Dorine Deen link
+        Wordpress link
+
   Commissions
+    site header
+      logo
+      main title
+      tag line
+      3 social media buttons
+        etsy
+        instagram
+        facebook
+      page links banner
+        4 pages buttons
+          home
+          gallery
+          commissions
+          contact
+    page header
+      page title
+      tag line
+      button to redirect to contact
+    body
+      3 sections
+        section title
+        price text
+        image
+        text content
+        separator
+        image collection
+        separator
+    note section
+      section title
+      text content
+      contains an hyperlink to contact
+      separator
+    customer quotes
+      quote
+      hyperlink to author's website
+      separator
+    footer
+      banner button get in touch
+      3 social media links
+        Etsy
+        Instagram
+        Facebook
+      Copyright line
+        Dorine Deen link
+        Wordpress link
+
   Contact
+    site header
+      logo
+      main title
+      tag line
+      3 social media buttons
+        etsy
+        instagram
+        facebook
+      page links banner
+        4 pages buttons
+          home
+          gallery
+          commissions
+          contact
+    page header
+      page title
+      tag line
+      contact form
+        name field
+        email field
+        message field
+        submit button
+    contact card
+      logo
+      name
+      sole trader info and address
+      email
+      3 social media logos
+        etsy
+        instagram
+        facebook 
+    footer
+      banner button get in touch
+      3 social media links
+        Etsy
+        Instagram
+        Facebook
+      copyright line
+        Dorine Deen link
+        Wordpress link
