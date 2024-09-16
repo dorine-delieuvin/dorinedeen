@@ -1,20 +1,37 @@
 dorinedeen.com/dorinedeen.wordpress.com
 
+On first visit:
+  cookies banner
+    accept button
+
+On all pages:
+  site header
+    logo
+    main title
+    tag line
+    3 social media buttons
+      etsy
+      instagram
+      facebook
+    page links banner
+      4 pages buttons
+        home
+        gallery
+        commissions
+        contact
+
+  site footer
+    3 social media links
+      etsy
+      instagram
+      facebook
+    copyright line
+      Dorine Deen link
+      Wordpress link
+
+Pages:
   Home
     site header
-      logo
-      main title
-      tag line
-      3 social media buttons
-        etsy
-        instagram
-        facebook
-      page links banner
-        4 pages buttons
-          home
-          gallery
-          commissions
-          contact
     links tree
       etsy
       instagram
@@ -23,32 +40,11 @@ dorinedeen.com/dorinedeen.wordpress.com
     body
       logo
       title
-      text content 
-    footer
-      banner button get in touch
-      3 social media links
-        Etsy
-        Instagram
-        Facebook
-      copyright line
-        Dorine Deen link
-        Wordpress link
+      text content
+    site footer
     
   Gallery
     site header
-      logo
-      main title
-      tag line
-      3 social media buttons
-        etsy
-        instagram
-        facebook
-      page links banner
-        4 pages buttons
-          home
-          gallery
-          commissions
-          contact
     page header
       title
       tag line
@@ -57,31 +53,11 @@ dorinedeen.com/dorinedeen.wordpress.com
       caption
       (inactive button)
       separator
-    footer
-      banner button get in touch
-      3 social media links
-        Etsy
-        Instagram
-        Facebook
-      copyright line
-        Dorine Deen link
-        Wordpress link
+    banner button get in touch
+    site footer
 
   Commissions
     site header
-      logo
-      main title
-      tag line
-      3 social media buttons
-        etsy
-        instagram
-        facebook
-      page links banner
-        4 pages buttons
-          home
-          gallery
-          commissions
-          contact
     page header
       page title
       tag line
@@ -95,40 +71,20 @@ dorinedeen.com/dorinedeen.wordpress.com
         separator
         image collection
         separator
-    note section
-      section title
-      text content
-      contains an hyperlink to contact
-      separator
-    customer quotes
-      quote
-      hyperlink to author's website
-      separator
-    footer
-      banner button get in touch
-      3 social media links
-        Etsy
-        Instagram
-        Facebook
-      Copyright line
-        Dorine Deen link
-        Wordpress link
+      note section
+        section title
+        text content
+        contains an hyperlink to contact
+        separator
+      customer quotes
+        quote
+        hyperlink to author's website
+        separator
+    banner button get in touch
+    site footer
 
   Contact
     site header
-      logo
-      main title
-      tag line
-      3 social media buttons
-        etsy
-        instagram
-        facebook
-      page links banner
-        4 pages buttons
-          home
-          gallery
-          commissions
-          contact
     page header
       page title
       tag line
@@ -146,12 +102,4 @@ dorinedeen.com/dorinedeen.wordpress.com
         etsy
         instagram
         facebook 
-    footer
-      banner button get in touch
-      3 social media links
-        Etsy
-        Instagram
-        Facebook
-      copyright line
-        Dorine Deen link
-        Wordpress link
+    site footer
