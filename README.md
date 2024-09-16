@@ -1,4 +1,4 @@
-Practicsing UI testing on my Wordpress website using Python and Playwright.
+Practising UI testing on my Wordpress website using Python and Playwright.
 
 Status of the Project: [Here](https://github.com/users/dorine-delieuvin/projects/3)
 
