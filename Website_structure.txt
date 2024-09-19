@@ -1,0 +1,106 @@
+dorinedeen.com/dorinedeen.wordpress.com
+
+On first visit:
+  cookies banner
+    accept button
+
+On all pages:
+  site header
+    logo
+    main title
+    tag line
+    3 social media buttons
+      etsy
+      instagram
+      facebook
+    page links banner
+      4 pages buttons
+        home
+        gallery
+        commissions
+        contact
+
+  site footer
+    3 social media links
+      etsy
+      instagram
+      facebook
+    copyright line
+      Dorine Deen link
+      Wordpress link
+
+Pages:
+  Home
+    site header
+    links tree
+      etsy
+      instagram
+      facebook
+      instagram side project
+    body
+      logo
+      title
+      text content
+    banner button get in touch
+    site footer
+    
+  Gallery
+    site header
+    page header
+      title
+      tag line
+    body
+      media
+      caption
+      (inactive button)
+      separator
+    banner button get in touch
+    site footer
+
+  Commissions
+    site header
+    page header
+      page title
+      tag line
+      button to redirect to contact
+    body
+      3 sections
+        section title
+        price text
+        image
+        text content
+        separator
+        image collection
+        separator
+      note section
+        section title
+        text content
+        contains an hyperlink to contact
+        separator
+      customer quotes
+        quote
+        hyperlink to author's website
+        separator
+    banner button get in touch
+    site footer
+
+  Contact
+    site header
+    page header
+      page title
+      tag line
+      contact form
+        name field
+        email field
+        message field
+        submit button
+    contact card
+      logo
+      name
+      sole trader info and address
+      email
+      3 social media logos
+        etsy
+        instagram
+        facebook 
+    site footer
