@@ -17,27 +17,33 @@ dorinedeen.wordpress.com website
 
 
 ## Tests Setup/Cleanup
-
-
+# Go to the starting url before each test.
 @pytest.fixture(scope="function", autouse=True)
 def before_each_after_each(page: Page):
-    # Go to the starting url before each test.
     page.goto(home_page_url)
     yield
 
 
 ## Data sets for parametrization
+# page_urls = [list of the page urls for the website]
 page_urls = [
-    "",
+    "",  # Home page
     "/gallery",
-    "/comissions",
+    "/commissions",
     "/contact",
+]
+
+# menu_buttons = [(nth button of pages menu, "url of destination page")]
+menu_buttons = [
+    (0, "/"),  # Home page
+    (1, "/gallery"),
+    (2, "/commissions"),
+    (3, "/contact"),
 ]
 
 
 ## Tests
-
-
+# Cookie banner
 @pytest.mark.cookies
 def test_cookie_banner_visible(page: Page):
     expect(page.locator("id=eu_cookie_law_widget-3")).to_be_visible()
@@ -50,6 +56,7 @@ def test_cookies_accepted(page: Page):
     expect(page.locator("id=eu_cookie_law_widget-3")).not_to_be_visible()
 
 
+# Site header
 @pytest.mark.site_header
 def test_site_header_content_visible(page: Page):
     expect(page.locator("div.site-logo")).to_be_visible()
@@ -64,3 +71,13 @@ def test_site_header_content_visible(page: Page):
 def test_site_header_visible_on_all_pages(page: Page, page_url):
     page.goto(home_page_url + page_url)
     expect(page.locator("id=masthead")).to_be_visible
+
+
+@pytest.mark.site_header
+@pytest.mark.parametrize("button", menu_buttons)
+def test_menu_button_links(page: Page, button):
+    page.locator("li.menu-item").locator(f"nth={button[0]}").click()
+    expect(page).to_have_url(re.compile(f".*{button[1]}"))
+
+
+# Site footer
