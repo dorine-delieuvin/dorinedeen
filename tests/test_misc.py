@@ -81,3 +81,22 @@ def test_menu_button_links(page: Page, button):
 
 
 # Site footer
+@pytest.mark.site_footer
+def test_site_footer_content_visible(page: Page):
+    expect(page.locator("id=menu-social-1")).to_be_visible()
+    expect(page.locator("div.site-info")).to_be_visible()
+
+    # checking whether the hyperlinks in the copyrights section contain a link redirecting to the respective websites
+    expect(page.locator("div.site-info > a.site-name")).to_have_attribute(
+        "href", re.compile("https://dorinedeen*")
+    )
+    expect(page.locator("div.site-info > a").locator("nth=1")).to_have_attribute(
+        "href", re.compile("https://wordpress.com*")
+    )
+
+
+@pytest.mark.site_footer
+@pytest.mark.parametrize("page_url", page_urls)
+def test_site_footer_visible_on_all_pages(page: Page, page_url):
+    page.goto(home_page_url + page_url)
+    expect(page.locator("id=colophon")).to_be_visible
