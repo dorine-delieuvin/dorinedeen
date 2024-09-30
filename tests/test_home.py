@@ -7,6 +7,7 @@ from playwright.sync_api import Page, expect
 UI testing, using Playwright
 test of the HOME page of the dorinedeen.wordpress.com website
 """
+pytestmark = pytest.mark.ui
 
 
 @pytest.mark.ui

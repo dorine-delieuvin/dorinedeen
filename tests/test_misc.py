@@ -4,9 +4,6 @@ import re
 from playwright.sync_api import Page, expect
 
 
-pytestmark = pytest.mark.ui
-home_page_url = "https://dorinedeen.wordpress.com"
-
 """
 UI testing, using Playwright
 
@@ -14,12 +11,13 @@ test of the sections visible on all pages
 or only on first connection to the
 dorinedeen.wordpress.com website
 """
+pytestmark = pytest.mark.ui
 
 
 ## Tests Setup/Cleanup
 # Go to the starting url before each test.
 @pytest.fixture(scope="function", autouse=True)
-def before_each_after_each(page: Page):
+def before_each_after_each(page: Page, home_page_url):
     page.goto(home_page_url)
     yield
 
@@ -68,7 +66,7 @@ def test_site_header_content_visible(page: Page):
 
 @pytest.mark.site_header
 @pytest.mark.parametrize("page_url", page_urls)
-def test_site_header_visible_on_all_pages(page: Page, page_url):
+def test_site_header_visible_on_all_pages(page: Page, home_page_url, page_url):
     page.goto(home_page_url + page_url)
     expect(page.locator("id=masthead")).to_be_visible
 
@@ -97,6 +95,6 @@ def test_site_footer_content_visible(page: Page):
 
 @pytest.mark.site_footer
 @pytest.mark.parametrize("page_url", page_urls)
-def test_site_footer_visible_on_all_pages(page: Page, page_url):
+def test_site_footer_visible_on_all_pages(page: Page, home_page_url, page_url):
     page.goto(home_page_url + page_url)
     expect(page.locator("id=colophon")).to_be_visible
