@@ -53,7 +53,7 @@ def test_home_page_body(page: Page):
     while i < len(body):
         expect(
             page.locator("p.has-text-align-justify").locator(f"nth={i}")
-        ).to_be_visible()
+        ).not_to_be_empty()
         i += 1
 
 

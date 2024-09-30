@@ -31,12 +31,14 @@ def test_gallery_header_and_url(page: Page):
 # Gallery content
 def test_gallery_content(page: Page):
     # images display
-    images = page.query_selector_all("img")
-    i = 1  # not chcking the logo in the site header
-    while i < len(images):
-        expect(page.locator("img").locator(f"nth={i}")).to_be_visible
-        i += 1
     # images have caption
+    images = page.query_selector_all(".wp-block-image")
+    i = 0
+    while i < len(images):
+        expect(page.locator(".wp-block-image").locator(f"nth={i}")).to_be_visible()
+        expect(page.locator("figcaption").locator(f"nth={i}")).not_to_be_empty()
+        i += 1
+
     # buttons have no link, only text
 
 
