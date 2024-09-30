@@ -45,7 +45,7 @@ menu_buttons = [
 @pytest.mark.cookies
 def test_cookie_banner_visible(page: Page):
     expect(page.locator("id=eu_cookie_law_widget-3")).to_be_visible()
-    expect(page.locator("a.Cookie Policy")).to_be_visible
+    expect(page.locator("a.Cookie Policy")).to_be_visible()
 
 
 @pytest.mark.cookies
@@ -97,4 +97,4 @@ def test_site_footer_content_visible(page: Page):
 @pytest.mark.parametrize("page_url", page_urls)
 def test_site_footer_visible_on_all_pages(page: Page, home_page_url, page_url):
     page.goto(home_page_url + page_url)
-    expect(page.locator("id=colophon")).to_be_visible
+    expect(page.locator("id=colophon")).to_be_visible()
