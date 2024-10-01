@@ -40,6 +40,13 @@ def test_gallery_content(page: Page):
         i += 1
 
     # buttons have no link, only text
+    buttons = page.query_selector_all("a.wp-block-button__link")
+    i = 0
+    while i < len(buttons):
+        expect(
+            page.locator("a.wp-block-button__link").locator(f"nth={i}")
+        ).not_to_be_empty()
+        i += 1
 
 
 # GET IN TOUCH button
