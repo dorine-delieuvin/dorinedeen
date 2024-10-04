@@ -39,10 +39,19 @@ def test_gallery_content(page: Page):
         expect(page.locator("figcaption").locator(f"nth={i}")).not_to_be_empty()
         i += 1
 
-    # buttons have no link, only text
-    buttons = page.query_selector_all("a.wp-block-button__link")
+    # buttons have no link
+    # buttons have text
+    buttons = page.query_selector_all(
+        ".wp-block-jetpack-layout-grid > a.wp-block-button__link"
+    )
     i = 0
     while i < len(buttons):
+        expect(
+            page.locator(
+                ".wp-block-jetpack-layout-grid > a.wp-block-button__link"
+            ).locator(f"nth={i}")
+        ).not_to_have_attribute("href", re.compile(r".|"))
+
         expect(
             page.locator("a.wp-block-button__link").locator(f"nth={i}")
         ).not_to_be_empty()
