@@ -54,17 +54,68 @@ def test_commissions_lets_talk_button(page: Page):
 
 # Page body
 @pytest.mark.commissions_body
-def test_commissions_categories():
-    pass
+def test_commissions_categories(page: Page):
+    # NOTE: can probably be optimised with only one loop
+    # category has title
+    category_titles = page.query_selector_all(
+        "div.wp-block-jetpack-layout-grid-column > h2.wp-block-heading"
+    )
+    i = 0
+    while i < len(category_titles):
+        expect(
+            page.locator(
+                "div.wp-block-jetpack-layout-grid-column > h2.wp-block-heading"
+            ).locator(f"nth={i}")
+        ).not_to_be_empty()
+        i += 1
+
+    # category description has text
+    category_descriptions = page.query_selector_all(
+        "div.wp-block-jetpack-layout-grid-column > ul.wp-block-list"
+    )
+    i = 0
+    while i < len(category_descriptions):
+        expect(
+            page.locator(
+                "div.wp-block-jetpack-layout-grid-column > ul.wp-block-list"
+            ).locator(f"nth={i}")
+        ).not_to_be_empty()
+        i += 1
+
+    # price indicator for each section
+    # NOTE: prone to breaking if sections added to the webpage
+    # as last locator ignored using order sensitive method.
+    category_prices = page.query_selector_all("p.has-small-font-size")
+    i = 0
+    while i < (len(category_prices) - 1):
+        expect(page.locator("p.has-small-font-size").locator(f"nth={i}")).to_have_text(
+            re.compile("[*£*]")
+        )
+        i += 1
+
+    # images display
+    images = page.query_selector_all("div.wp-block-jetpack-layout-grid-column img")
+    i = 0
+    while i < len(images):
+        expect(
+            page.locator("div.wp-block-jetpack-layout-grid-column img").locator(
+                f"nth={i}"
+            )
+        ).to_be_visible()
+        i += 1
 
 
 @pytest.mark.commissions_body
-def test_to_consider_section():
-    pass
+def test_to_consider_section(page: Page):
+    expect(
+        page.locator(
+            "div.entry-content > div.wp-block-group > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container"
+        )
+    ).not_to_be_empty()
 
 
 # Customer reviews
-def test_customer_reviews():
+def test_customer_reviews(page: Page):
     pass
 
 
