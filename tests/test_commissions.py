@@ -113,10 +113,28 @@ def test_to_consider_section(page: Page):
         )
     ).not_to_be_empty()
 
+    # check hyperlink
+    expect(
+        page.locator(
+            "div.entry-content > div.wp-block-group > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container > p > a"
+        )
+    ).to_have_text("Contact me")
+    expect(
+        page.locator(
+            "div.entry-content > div.wp-block-group > div.wp-block-group__inner-container > div.wp-block-group > div.wp-block-group__inner-container > p > a"
+        )
+    ).to_have_attribute("href", re.compile("./contact/*"))
+
 
 # Customer reviews
 def test_customer_reviews(page: Page):
-    pass
+    #
+    expect(
+        page.locator(".wp-block-jetpack-layout-grid-column > p > em > em")
+    ).not_to_be_empty()
+    expect(
+        page.locator(".wp-block-jetpack-layout-grid-column > p > a")
+    ).to_have_attribute("href", re.compile("https://*"))
 
 
 # GET IN TOUCH button
