@@ -45,7 +45,7 @@ menu_buttons = [
 @pytest.mark.cookies
 def test_cookie_banner_visible(page: Page):
     expect(page.locator("id=eu_cookie_law_widget-3")).to_be_visible()
-    expect(page.locator("a.Cookie Policy")).to_be_visible()
+    expect(page.locator("div.hide-on-button > form > a")).to_be_visible()
 
 
 @pytest.mark.cookies
