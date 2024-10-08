@@ -55,42 +55,33 @@ def test_commissions_lets_talk_button(page: Page):
 # Page body
 @pytest.mark.commissions_body
 def test_commissions_categories(page: Page):
-    # NOTE: can probably be optimised with only one loop
-    # category has title
-    category_titles = page.query_selector_all(
+    categories = page.query_selector_all(
         "div.wp-block-jetpack-layout-grid-column > h2.wp-block-heading"
     )
     i = 0
-    while i < len(category_titles):
+    while i < len(categories):
+        # titles
         expect(
             page.locator(
                 "div.wp-block-jetpack-layout-grid-column > h2.wp-block-heading"
             ).locator(f"nth={i}")
         ).not_to_be_empty()
-        i += 1
 
-    # category description has text
-    category_descriptions = page.query_selector_all(
-        "div.wp-block-jetpack-layout-grid-column > ul.wp-block-list"
-    )
-    i = 0
-    while i < len(category_descriptions):
+        # descriptions
         expect(
             page.locator(
                 "div.wp-block-jetpack-layout-grid-column > ul.wp-block-list"
             ).locator(f"nth={i}")
         ).not_to_be_empty()
-        i += 1
 
-    # price indicator for each section
-    # NOTE: prone to breaking if sections added to the webpage
-    # as last locator ignored using order sensitive method.
-    category_prices = page.query_selector_all("p.has-small-font-size")
-    i = 0
-    while i < (len(category_prices) - 1):
-        expect(page.locator("p.has-small-font-size").locator(f"nth={i}")).to_have_text(
-            re.compile("[*£*]")
-        )
+        # prices
+        expect(
+            page.locator(
+                "div.wp-block-jetpack-layout-grid-column > h2.wp-block-heading"
+            )
+            .locator("//following-sibling::*[1]")
+            .locator(f"nth={i}")
+        ).to_have_text(re.compile("[*£*]"))
         i += 1
 
     # images display
