@@ -2,4 +2,4 @@ Practising UI testing on my Wordpress website using Python and Playwright.
 
 Status of the Project: [Here](https://github.com/users/dorine-delieuvin/projects/3)
 
-Website: https://dorinedeen.wordpress.com/
+Website: https://dorinedeen.wordpress.com/ (please note this domain was abandonned, and that the code for this project does not work anymore)
